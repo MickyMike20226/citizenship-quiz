@@ -14,8 +14,25 @@ body {
   text-align: center;
 }
 
-h1 { font-size: 36px; }
-.subtitle { font-size: 22px; color: #666; }
+h1 { font-size: 36px; margin-bottom: 5px; }
+
+.subtitle {
+  font-size: 22px;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.lang-btn {
+  margin-bottom: 18px;
+  padding: 10px 18px;
+  border: 2px solid #0d2137;
+  background: white;
+  color: #0d2137;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
 .card {
   background: white;
@@ -26,10 +43,20 @@ h1 { font-size: 36px; }
   box-shadow: 0 4px 20px rgba(0,0,0,0.12);
 }
 
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+
 .question {
   font-size: 24px;
-  margin: 20px 0;
+  font-weight: bold;
   text-align: left;
+  margin: 24px 0;
+  line-height: 1.4;
 }
 
 .answer {
@@ -37,49 +64,86 @@ h1 { font-size: 36px; }
   width: 100%;
   margin: 10px 0;
   padding: 15px;
+  font-size: 18px;
+  text-align: left;
   border: 2px solid #ddd;
   border-radius: 8px;
+  background: white;
   cursor: pointer;
-  text-align: left;
 }
 
+.answer:hover { background: #f0ede6; }
+
 .correct {
-  background: #dcfce7;
-  border-color: #16a34a;
+  background: #dcfce7 !important;
+  border-color: #16a34a !important;
+  color: #15803d !important;
+  font-weight: bold;
 }
 
 .wrong {
-  background: #fee2e2;
-  border-color: #c0392b;
+  background: #fee2e2 !important;
+  border-color: #c0392b !important;
+  color: #b91c1c !important;
+  font-weight: bold;
 }
 
-/* 🔥 BUTTON FINAL */
+#feedback {
+  margin-top: 18px;
+  font-size: 18px;
+  font-weight: bold;
+  min-height: 24px;
+}
+
+#next-btn, #restart-btn {
+  margin-top: 24px;
+  padding: 14px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #0d2137;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: none;
+}
+
+#result-screen { display: none; }
+
+.passed { color: #15803d; font-size: 32px; }
+.failed { color: #b91c1c; font-size: 32px; }
+
+.note {
+  margin-top: 20px;
+  color: #777;
+  font-size: 13px;
+}
+
+/* LEARN MORE BUTTON */
 button.explain-btn {
   margin-top: 12px;
   padding: 12px 18px;
   font-size: 16px;
   font-weight: bold;
-  background: #facc15;
-  color: black;
+  background: #facc15 !important;
+  color: #000 !important;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
-/* HOVER */
 button.explain-btn:hover {
-  background: #c0392b;
-  color: white;
+  background: #c0392b !important;
+  color: #fff !important;
   transform: scale(1.05);
 }
 
-/* PULSE */
 .pulse {
-  animation: pulse 1.4s infinite;
+  animation: softPulse 1.4s infinite;
 }
 
-@keyframes pulse {
+@keyframes softPulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.06); }
   100% { transform: scale(1); }
@@ -87,10 +151,20 @@ button.explain-btn:hover {
 
 .explain-box {
   display: none;
-  margin-top: 10px;
-  padding: 10px;
+  margin-top: 12px;
+  padding: 12px;
   background: #f0ede6;
   border-radius: 8px;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  body { padding: 12px; }
+  .card { padding: 18px; }
+  h1 { font-size: 30px; }
+  .question { font-size: 21px; }
+  .answer { font-size: 16px; }
+  .top { flex-direction: column; text-align: left; }
 }
 </style>
 </head>
@@ -98,39 +172,35 @@ button.explain-btn:hover {
 <body>
 
 <h1>US Citizenship Test</h1>
-<p class="subtitle">Practice Quiz</p>
+<div class="subtitle" id="subtitle">Practice Quiz</div>
+<button class="lang-btn" id="lang-btn" onclick="toggleLanguage()">🇪🇸 Español</button>
 
 <div class="card">
-  <div id="question">Question here</div>
-  <div id="answers"></div>
+  <div id="quiz-screen">
+    <div class="top">
+      <div id="question-count">Question 1 of 20</div>
+      <div id="score-count">Score: 0</div>
+    </div>
 
-  <div id="feedback"></div>
+    <div id="question-text" class="question"></div>
+    <div id="answers"></div>
+    <div id="feedback"></div>
+
+    <button id="next-btn">Next Question</button>
+  </div>
+
+  <div id="result-screen">
+    <h2 id="result-title"></h2>
+    <p id="result-message"></p>
+    <button id="restart-btn">Try Again</button>
+  </div>
+
+  <div class="note" id="note">
+    128-question practice pool. Randomly selects 20 questions. 12 correct answers to pass.
+  </div>
 </div>
 
-<script>
-let lang = "en";
-
-function showWrongAnswer(correct, explanation) {
-  const feedback = document.getElementById("feedback");
-
-  feedback.innerHTML = `
-    <p>Correct answer: ${correct}</p>
-
-    <button class="explain-btn pulse" onclick="toggleExplanation()">
-      ${lang === "en" ? "Learn more here!" : "¡Aprende más aquí!"}
-    </button>
-
-    <div id="explanation-box" class="explain-box">
-      ${lang === "en" ? explanation.en : explanation.es}
-    </div>
-  `;
-}
-
-function toggleExplanation() {
-  const box = document.getElementById("explanation-box");
-  box.style.display = box.style.display === "block" ? "none" : "block";
-}
-</script>
 <script src="quiz.js"></script>
-</body>
 
+</body>
+</html>
