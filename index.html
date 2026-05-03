@@ -108,7 +108,7 @@ h1 { font-size: 36px; margin-bottom: 5px; }
 
 .explanation-toggle {
   margin-top: 14px;
-  padding: 13px 18px;
+  padding: 14px 20px;
   font-size: 17px;
   font-weight: bold;
   background: #0d2137;
@@ -117,9 +117,27 @@ h1 { font-size: 36px; margin-bottom: 5px; }
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  animation: softPulse 1.4s infinite;
 }
 .explanation-toggle:hover {
-  background: #1e3a5f;
+  background: #c0392b;
+  transform: scale(1.06);
+  box-shadow: 0 6px 18px rgba(192,57,43,0.28);
+}
+@keyframes softPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(13,33,55,0.35);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 12px rgba(13,33,55,0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(13,33,55,0);
+  }
 }
 .explanation-panel {
   display: none;
@@ -134,24 +152,7 @@ h1 { font-size: 36px; margin-bottom: 5px; }
   text-align: left;
   font-weight: normal;
 }
-.explain-btn {
-  animation: softPulse 1.4s infinite;
-}
 
-@keyframes softPulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(13, 33, 55, 0.35);
-  }
-  70% {
-    transform: scale(1.04);
-    box-shadow: 0 0 0 10px rgba(13, 33, 55, 0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(13, 33, 55, 0);
-  }
-}
 </style>
 </head>
 <body>
