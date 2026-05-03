@@ -769,11 +769,10 @@ function checkAnswer(button, selected, question) {
       feedbackHtml += `
         <br>
         <button class="explanation-toggle" onclick="toggleExplanation()">
-          ${lang === "en" ? "Why this answer?" : "¿Por qué esta respuesta?"}
+          ${lang === "en" ? "Learn more here!" : "¡Aprende más aquí!"}
         </button>
         <div id="explanation-box" class="explanation-panel">
-          <strong>EN:</strong> ${explanation.en}<br><br>
-          <strong>ES:</strong> ${explanation.es}
+          ${lang === "en" ? explanation.en : explanation.es}
         </div>
       `;
     }
