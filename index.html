@@ -134,7 +134,24 @@ h1 { font-size: 36px; margin-bottom: 5px; }
   text-align: left;
   font-weight: normal;
 }
+.explain-btn {
+  animation: softPulse 1.4s infinite;
+}
 
+@keyframes softPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(13, 33, 55, 0.35);
+  }
+  70% {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 10px rgba(13, 33, 55, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(13, 33, 55, 0);
+  }
+}
 </style>
 </head>
 <body>
