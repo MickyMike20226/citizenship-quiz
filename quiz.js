@@ -654,6 +654,7 @@ let quizQuestions = [];
 let currentQuestion = 0;
 let score = 0;
 let answered = false;
+let questionLang = "en";
 
 function shuffle(array) {
   const copy = [...array];
@@ -690,7 +691,13 @@ function updateStaticText() {
 function toggleLanguage() {
   lang = lang === "en" ? "es" : "en";
   updateStaticText();
-  showQuestion();
+
+  if (document.getElementById("result-screen").style.display === "block") {
+    showResult();
+    return;
+  }
+
+  if (!answered) showQuestion();
 }
 
 function startQuiz() {
@@ -710,6 +717,7 @@ function startQuiz() {
 
 function showQuestion() {
   answered = false;
+  questionLang = lang;
 
   const question = quizQuestions[currentQuestion];
 
@@ -743,7 +751,7 @@ function checkAnswer(button, selected, question) {
   if (answered) return;
   answered = true;
 
-  const correct = lang === "en" ? question.answer_en : question.answer_es;
+  const correct = questionLang === "en" ? question.answer_en : question.answer_es;
   const buttons = document.querySelectorAll(".answer");
 
   buttons.forEach(btn => {
