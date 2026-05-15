@@ -842,3 +842,9 @@ if(params.get("lang") === "es"){
 
 startQuiz();
 
+if(lang === "es"){
+  updateStaticText();
+  showQuestion();
+}
+startQuiz();
+
