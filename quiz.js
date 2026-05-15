@@ -832,7 +832,13 @@ function toggleExplanation() {
   if (!box) return;
   box.style.display = box.style.display === "none" || box.style.display === "" ? "block" : "none";
 }
-
 document.getElementById("restart-btn").onclick = startQuiz;
 
+const params = new URLSearchParams(window.location.search);
+
+if(params.get("lang") === "es"){
+  lang = "es";
+}
+
 startQuiz();
+
