@@ -1,8 +1,7 @@
 // US Citizenship Test Quiz - 128 questions + ENG/ESP explanations
 // Hosted externally for GoDaddy custom HTML limit.
 
-let lang = "en";
-
+let lang = new URLSearchParams(window.location.search).get("lang") === "es" ? "es" : "en";
 const explanations = {
   "What is the form of government of the United States?": {
     "en": "The United States is a republic, which means people elect leaders to represent them. Power comes from citizens, not a king or dictator.",
@@ -834,17 +833,5 @@ function toggleExplanation() {
 }
 document.getElementById("restart-btn").onclick = startQuiz;
 
-const params = new URLSearchParams(window.location.search);
-
-if(params.get("lang") === "es"){
-  lang = "es";
-}
-
-startQuiz();
-
-if(lang === "es"){
-  updateStaticText();
-  showQuestion();
-}
 startQuiz();
 
