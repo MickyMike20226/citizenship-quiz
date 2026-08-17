@@ -24,6 +24,20 @@ h1 { font-size: 36px; margin-bottom: 5px; }
   font-weight: bold;
   cursor: pointer;
 }
+.spanish-nav { display: none; margin: -4px 0 18px; }
+.spanish-nav a {
+  display: inline-block;
+  margin: 4px;
+  padding: 10px 14px;
+  border-radius: 7px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+.spanish-nav .home-link { background: #0d2137; }
+.spanish-nav .officials-link { background: #168a57; }
+.spanish-nav-note { margin: 6px auto 0; max-width: 760px; color: #555; font-size: 14px; line-height: 1.4; }
 .card {
   background: white;
   max-width: 760px;
@@ -160,6 +174,12 @@ h1 { font-size: 36px; margin-bottom: 5px; }
 <div class="subtitle" id="subtitle">Practice Quiz</div>
 <button class="lang-btn" id="lang-btn" onclick="toggleLanguage()">🇪🇸 Español</button>
 
+<div class="spanish-nav" id="spanish-direct-nav">
+  <a class="home-link" href="https://test4citizenusa.com/">🏠 Inicio</a>
+  <a class="officials-link" href="https://test4citizenusa.com/illinois-and-all-states">🇺🇸 Buscar senadores y representante</a>
+  <div class="spanish-nav-note">En la página principal puedes usar la herramienta de código postal (ZIP Code) para encontrar tus senadores y representante en el Congreso de EE. UU.</div>
+</div>
+
 <div class="card">
   <div id="quiz-screen">
     <div class="top">
@@ -189,6 +209,11 @@ h1 { font-size: 36px; margin-bottom: 5px; }
   <strong>Disclaimer:</strong> This practice test uses representatives and senators from Illinois as examples. For the real test, study your state’s current representatives and senators. Links below.
 </div>
 
+<script>
+  if (new URLSearchParams(window.location.search).get('lang') === 'es') {
+    document.getElementById('spanish-direct-nav').style.display = 'block';
+  }
+</script>
 <script src="quiz.js"></script>
 </body>
 </html>
