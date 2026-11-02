@@ -159,9 +159,9 @@ const explanations = {
     "en": "If the President cannot serve, the Vice President becomes President. This keeps leadership stable during an emergency.",
     "es": "Si el Presidente no puede servir, el Vicepresidente se convierte en Presidente. Esto mantiene estable el liderazgo durante una emergencia."
   },
-  "If both the President and Vice President can no longer serve, who becomes President?": {
-    "en": "If both the President and Vice President cannot serve, the Speaker of the House is next. This is part of the presidential line of succession.",
-    "es": "Si el Presidente y el Vicepresidente no pueden servir, sigue el Presidente de la Cámara. Esto es parte de la línea de sucesión presidencial."
+  "Abraham Lincoln is famous for many things. Name one.": {
+    "en": "Abraham Lincoln was the 16th President of the United States. He led the country during the Civil War, helped preserve the Union, and issued the Emancipation Proclamation. USCIS accepts several of these accomplishments as correct answers.",
+    "es": "Abraham Lincoln fue el decimosexto presidente de Estados Unidos. Dirigió al país durante la Guerra Civil, ayudó a preservar la Unión y emitió la Proclamación de Emancipación. USCIS acepta varios de estos logros como respuestas correctas."
   },
   "Name one power of the President.": {
     "en": "One presidential power is signing bills into law. The President can also veto bills and lead the military.",
@@ -379,9 +379,9 @@ const explanations = {
     "en": "The Battle of Gettysburg was a turning point in the Civil War. It was one of the war’s most important battles.",
     "es": "La Batalla de Gettysburg fue un punto de cambio en la Guerra Civil. Fue una de las batallas más importantes de la guerra."
   },
-  "Name one reason why the Civil War started.": {
-    "en": "Slavery was a major reason the Civil War started. The conflict decided whether slavery would continue in the United States.",
-    "es": "La esclavitud fue una razón principal por la que empezó la Guerra Civil. El conflicto decidió si la esclavitud continuaría en Estados Unidos."
+  "What U.S. war ended slavery?": {
+    "en": "The Civil War (1861–1865) led to the end of slavery in the United States. The 13th Amendment, ratified in 1865, abolished slavery except as punishment for a crime.",
+    "es": "La Guerra Civil (1861–1865) condujo al fin de la esclavitud en Estados Unidos. La Decimotercera Enmienda, ratificada en 1865, abolió la esclavitud, excepto como castigo por un delito."
   },
   "What did the Emancipation Proclamation do?": {
     "en": "The Emancipation Proclamation declared enslaved people free in Confederate areas. It changed the purpose of the Civil War toward ending slavery.",
@@ -557,7 +557,7 @@ The President of the United States can serve only two terms. Why?|El Presidente 
 Who is the President of the United States now?|¿Quién es el Presidente de Estados Unidos ahora?|Donald Trump|Donald Trump|Joe Biden|Joe Biden|Barack Obama|Barack Obama|George Washington|George Washington
 Who is the Vice President of the United States now?|¿Quién es el Vicepresidente de Estados Unidos ahora?|JD Vance|JD Vance|Kamala Harris|Kamala Harris|Mike Johnson|Mike Johnson|Chuck Schumer|Chuck Schumer
 If the President can no longer serve, who becomes President?|Si el Presidente ya no puede servir, ¿quién se convierte en Presidente?|The Vice President|El Vicepresidente|The Speaker of the House|El Presidente de la Cámara|The Chief Justice|El Juez Presidente|The governor|El gobernador
-If both the President and Vice President can no longer serve, who becomes President?|Si el Presidente y el Vicepresidente ya no pueden servir, ¿quién se convierte en Presidente?|The Speaker of the House of Representatives|El Presidente de la Cámara de Representantes|The Chief Justice|El Juez Presidente|The Secretary of Defense|El Secretario de Defensa|A governor|Un gobernador
+Abraham Lincoln is famous for many things. Name one.|Abraham Lincoln es famoso por muchas cosas. Nombra una.|16th President of the United States|Decimosexto presidente de Estados Unidos|First President of the United States|Primer presidente de Estados Unidos|Primary author of the Declaration of Independence|Principal autor de la Declaración de Independencia|Fourth President of the United States|Cuarto presidente de Estados Unidos
 Name one power of the President.|Nombre un poder del Presidente.|Signs bills into law|Firma proyectos de ley para convertirlos en ley|Prints money|Imprime dinero|Decides Supreme Court cases|Decide casos de la Corte Suprema|Changes the Constitution alone|Cambia la Constitución solo
 Who is Commander in Chief of the U.S. military?|¿Quién es el Comandante en Jefe de las Fuerzas Armadas de Estados Unidos?|The President|El Presidente|The Speaker of the House|El Presidente de la Cámara|The Chief Justice|El Juez Presidente|The governor|El gobernador
 Who signs bills to become laws?|¿Quién firma los proyectos de ley para convertirlos en ley?|The President|El Presidente|The Supreme Court|La Corte Suprema|The governor|El gobernador|The military|El ejército
@@ -612,7 +612,7 @@ What territory did the United States buy from France in 1803?|¿Qué territorio 
 Name one war fought by the United States in the 1800s.|Nombre una guerra peleada por Estados Unidos en los años 1800.|Civil War|Guerra Civil|World War II|Segunda Guerra Mundial|Korean War|Guerra de Corea|Vietnam War|Guerra de Vietnam
 Name the U.S. war between the North and the South.|Nombre la guerra de Estados Unidos entre el Norte y el Sur.|Civil War|Guerra Civil|World War I|Primera Guerra Mundial|Revolutionary War|Guerra Revolucionaria|Persian Gulf War|Guerra del Golfo Pérsico
 The Civil War had many important events. Name one.|La Guerra Civil tuvo muchos eventos importantes. Nombre uno.|Battle of Gettysburg|Batalla de Gettysburg|Pearl Harbor|Pearl Harbor|September 11 attacks|Ataques del 11 de septiembre|D-Day|Día D
-Name one reason why the Civil War started.|Nombre una razón por la que empezó la Guerra Civil.|Slavery|Esclavitud|The moon landing|La llegada a la Luna|The Cold War|La Guerra Fría|Women’s suffrage|El sufragio femenino
+What U.S. war ended slavery?|¿Qué guerra de Estados Unidos puso fin a la esclavitud?|The Civil War|La Guerra Civil|The War of 1812|La Guerra de 1812|The American Revolutionary War|La Guerra de Independencia de Estados Unidos|World War I|La Primera Guerra Mundial
 What did the Emancipation Proclamation do?|¿Qué hizo la Proclamación de Emancipación?|Freed the slaves|Liberó a los esclavos|Created the Supreme Court|Creó la Corte Suprema|Bought Louisiana|Compró Luisiana|Started World War I|Empezó la Primera Guerra Mundial
 What amendment gives citizenship to all persons born in the United States?|¿Qué enmienda da ciudadanía a todas las personas nacidas en Estados Unidos?|14th Amendment|Enmienda 14|1st Amendment|Primera Enmienda|2nd Amendment|Segunda Enmienda|19th Amendment|Enmienda 19
 What amendment gave voting rights to men of all races?|¿Qué enmienda dio derechos de voto a hombres de todas las razas?|15th Amendment|Enmienda 15|13th Amendment|Enmienda 13|14th Amendment|Enmienda 14|22nd Amendment|Enmienda 22
