@@ -95,9 +95,9 @@ const explanations = {
     "en": "Dick Durbin is one of Illinois’ U.S. Senators. Senator answers can change, so people should always check their own state before the real test.",
     "es": "Dick Durbin es uno de los senadores de Illinois. Las respuestas sobre senadores pueden cambiar, así que la gente debe revisar su propio estado antes del examen real."
   },
-  "Who is another U.S. Senator from Illinois now?": {
-    "en": "Tammy Duckworth is one of Illinois’ U.S. Senators. Senator answers depend on the state where the applicant lives.",
-    "es": "Tammy Duckworth es una senadora de Illinois. Las respuestas sobre senadores dependen del estado donde vive el solicitante."
+  "Name your U.S. representative.": {
+    "en": "USCIS asks for the name of the person representing your own congressional district in the U.S. House. The correct name depends on your address and may change after elections. Find it at house.gov, and be ready to say that person's name at your interview. 'It depends on my district' is not a sufficient oral answer.",
+    "es": "USCIS pregunta el nombre de la persona que representa tu propio distrito electoral en la Cámara de Representantes. El nombre correcto depende de tu domicilio y puede cambiar después de las elecciones. Consúltalo en house.gov y prepárate para decir ese nombre en la entrevista. Decir solo 'depende de mi distrito' no es suficiente."
   },
   "How many voting members are in the House of Representatives?": {
     "en": "The House of Representatives has 435 voting members. Seats are divided among states based on population.",
@@ -159,9 +159,9 @@ const explanations = {
     "en": "If the President cannot serve, the Vice President becomes President. This keeps leadership stable during an emergency.",
     "es": "Si el Presidente no puede servir, el Vicepresidente se convierte en Presidente. Esto mantiene estable el liderazgo durante una emergencia."
   },
-  "If both the President and Vice President can no longer serve, who becomes President?": {
-    "en": "If both the President and Vice President cannot serve, the Speaker of the House is next. This is part of the presidential line of succession.",
-    "es": "Si el Presidente y el Vicepresidente no pueden servir, sigue el Presidente de la Cámara. Esto es parte de la línea de sucesión presidencial."
+  "Abraham Lincoln is famous for many things. Name one.": {
+    "en": "Abraham Lincoln was the 16th U.S. president. He led the country during the Civil War, helped preserve the Union, and issued the Emancipation Proclamation. USCIS accepts several of these accomplishments.",
+    "es": "Abraham Lincoln fue el decimosexto presidente de Estados Unidos. Dirigió al país durante la Guerra Civil, ayudó a preservar la Unión y emitió la Proclamación de Emancipación. USCIS acepta varios de estos logros."
   },
   "Name one power of the President.": {
     "en": "One presidential power is signing bills into law. The President can also veto bills and lead the military.",
@@ -379,9 +379,9 @@ const explanations = {
     "en": "The Battle of Gettysburg was a turning point in the Civil War. It was one of the war’s most important battles.",
     "es": "La Batalla de Gettysburg fue un punto de cambio en la Guerra Civil. Fue una de las batallas más importantes de la guerra."
   },
-  "Name one reason why the Civil War started.": {
-    "en": "Slavery was a major reason the Civil War started. The conflict decided whether slavery would continue in the United States.",
-    "es": "La esclavitud fue una razón principal por la que empezó la Guerra Civil. El conflicto decidió si la esclavitud continuaría en Estados Unidos."
+  "What U.S. war ended slavery?": {
+    "en": "The Civil War led to the end of slavery in the United States. The 13th Amendment, ratified in 1865, formally abolished slavery, except as punishment for a crime.",
+    "es": "La Guerra Civil condujo al fin de la esclavitud en Estados Unidos. La Decimotercera Enmienda, ratificada en 1865, abolió formalmente la esclavitud, excepto como castigo por un delito."
   },
   "What did the Emancipation Proclamation do?": {
     "en": "The Emancipation Proclamation declared enslaved people free in Confederate areas. It changed the purpose of the Civil War toward ending slavery.",
@@ -541,7 +541,7 @@ Name one power of the U.S. Congress.|Nombre un poder del Congreso de Estados Uni
 How many U.S. Senators are there?|¿Cuántos senadores hay en Estados Unidos?|100|100|50|50|435|435|9|9
 How long is a term for a U.S. Senator?|¿Cuánto dura el mandato de un senador de Estados Unidos?|6 years|6 años|2 years|2 años|4 years|4 años|10 years|10 años
 Who is one U.S. Senator from Illinois now?|¿Quién es un senador de Estados Unidos por Illinois ahora?|Dick Durbin|Dick Durbin|Mike Johnson|Mike Johnson|JD Vance|JD Vance|John Roberts|John Roberts
-Who is another U.S. Senator from Illinois now?|¿Quién es otro senador de Estados Unidos por Illinois ahora?|Tammy Duckworth|Tammy Duckworth|Chuck Schumer|Chuck Schumer|Marco Rubio|Marco Rubio|Mike Johnson|Mike Johnson
+Name your U.S. representative.|Nombra a tu representante de Estados Unidos.|The name depends on your congressional district; find your representative at house.gov|El nombre depende de tu distrito electoral; busca a tu representante en house.gov|Any U.S. senator from your state|Cualquier senador federal de tu estado|Your state governor|El gobernador de tu estado|The Chief Justice of the United States|El presidente de la Corte Suprema de Estados Unidos
 How many voting members are in the House of Representatives?|¿Cuántos miembros con voto hay en la Cámara de Representantes?|435|435|100|100|50|50|9|9
 How long is a term for a member of the House of Representatives?|¿Cuánto dura el mandato de un miembro de la Cámara de Representantes?|2 years|2 años|4 years|4 años|6 years|6 años|8 years|8 años
 Why do U.S. representatives serve shorter terms than U.S. senators?|¿Por qué los representantes sirven mandatos más cortos que los senadores?|To more closely follow public opinion|Para seguir más de cerca la opinión pública|Because they are judges|Porque son jueces|Because they are appointed|Porque son nombrados|Because they serve for life|Porque sirven de por vida
@@ -557,7 +557,7 @@ The President of the United States can serve only two terms. Why?|El Presidente 
 Who is the President of the United States now?|¿Quién es el Presidente de Estados Unidos ahora?|Donald Trump|Donald Trump|Joe Biden|Joe Biden|Barack Obama|Barack Obama|George Washington|George Washington
 Who is the Vice President of the United States now?|¿Quién es el Vicepresidente de Estados Unidos ahora?|JD Vance|JD Vance|Kamala Harris|Kamala Harris|Mike Johnson|Mike Johnson|Chuck Schumer|Chuck Schumer
 If the President can no longer serve, who becomes President?|Si el Presidente ya no puede servir, ¿quién se convierte en Presidente?|The Vice President|El Vicepresidente|The Speaker of the House|El Presidente de la Cámara|The Chief Justice|El Juez Presidente|The governor|El gobernador
-If both the President and Vice President can no longer serve, who becomes President?|Si el Presidente y el Vicepresidente ya no pueden servir, ¿quién se convierte en Presidente?|The Speaker of the House of Representatives|El Presidente de la Cámara de Representantes|The Chief Justice|El Juez Presidente|The Secretary of Defense|El Secretario de Defensa|A governor|Un gobernador
+Abraham Lincoln is famous for many things. Name one.|Abraham Lincoln es famoso por muchas cosas. Nombra una.|16th President of the United States|Decimosexto presidente de Estados Unidos|Writer of the Declaration of Independence|Autor de la Declaración de Independencia|First President of the United States|Primer presidente de Estados Unidos|First person to walk on the Moon|Primera persona en caminar sobre la Luna
 Name one power of the President.|Nombre un poder del Presidente.|Signs bills into law|Firma proyectos de ley para convertirlos en ley|Prints money|Imprime dinero|Decides Supreme Court cases|Decide casos de la Corte Suprema|Changes the Constitution alone|Cambia la Constitución solo
 Who is Commander in Chief of the U.S. military?|¿Quién es el Comandante en Jefe de las Fuerzas Armadas de Estados Unidos?|The President|El Presidente|The Speaker of the House|El Presidente de la Cámara|The Chief Justice|El Juez Presidente|The governor|El gobernador
 Who signs bills to become laws?|¿Quién firma los proyectos de ley para convertirlos en ley?|The President|El Presidente|The Supreme Court|La Corte Suprema|The governor|El gobernador|The military|El ejército
@@ -612,7 +612,7 @@ What territory did the United States buy from France in 1803?|¿Qué territorio 
 Name one war fought by the United States in the 1800s.|Nombre una guerra peleada por Estados Unidos en los años 1800.|Civil War|Guerra Civil|World War II|Segunda Guerra Mundial|Korean War|Guerra de Corea|Vietnam War|Guerra de Vietnam
 Name the U.S. war between the North and the South.|Nombre la guerra de Estados Unidos entre el Norte y el Sur.|Civil War|Guerra Civil|World War I|Primera Guerra Mundial|Revolutionary War|Guerra Revolucionaria|Persian Gulf War|Guerra del Golfo Pérsico
 The Civil War had many important events. Name one.|La Guerra Civil tuvo muchos eventos importantes. Nombre uno.|Battle of Gettysburg|Batalla de Gettysburg|Pearl Harbor|Pearl Harbor|September 11 attacks|Ataques del 11 de septiembre|D-Day|Día D
-Name one reason why the Civil War started.|Nombre una razón por la que empezó la Guerra Civil.|Slavery|Esclavitud|The moon landing|La llegada a la Luna|The Cold War|La Guerra Fría|Women’s suffrage|El sufragio femenino
+What U.S. war ended slavery?|¿Qué guerra de Estados Unidos terminó con la esclavitud?|The Civil War|La Guerra Civil|The War of 1812|La Guerra de 1812|The American Revolutionary War|La Guerra de Independencia de Estados Unidos|World War I|La Primera Guerra Mundial
 What did the Emancipation Proclamation do?|¿Qué hizo la Proclamación de Emancipación?|Freed the slaves|Liberó a los esclavos|Created the Supreme Court|Creó la Corte Suprema|Bought Louisiana|Compró Luisiana|Started World War I|Empezó la Primera Guerra Mundial
 What amendment gives citizenship to all persons born in the United States?|¿Qué enmienda da ciudadanía a todas las personas nacidas en Estados Unidos?|14th Amendment|Enmienda 14|1st Amendment|Primera Enmienda|2nd Amendment|Segunda Enmienda|19th Amendment|Enmienda 19
 What amendment gave voting rights to men of all races?|¿Qué enmienda dio derechos de voto a hombres de todas las razas?|15th Amendment|Enmienda 15|13th Amendment|Enmienda 13|14th Amendment|Enmienda 14|22nd Amendment|Enmienda 22
