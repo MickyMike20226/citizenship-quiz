@@ -794,6 +794,10 @@ function checkAnswer(button, selected, question) {
   nextBtn.innerText = currentQuestion === 19
     ? (lang === "en" ? "See Result" : "Ver resultado")
     : (lang === "en" ? "Next Question" : "Siguiente pregunta");
+
+  if (currentQuestion === 0 && questionLang === "en" && window.parent !== window) {
+    window.parent.postMessage("quiz_start_en", "https://test4citizenusa.com");
+  }
 }
 
 document.getElementById("next-btn").onclick = function() {
