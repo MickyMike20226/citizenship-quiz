@@ -795,8 +795,9 @@ function checkAnswer(button, selected, question) {
     ? (lang === "en" ? "See Result" : "Ver resultado")
     : (lang === "en" ? "Next Question" : "Siguiente pregunta");
 
-  if (currentQuestion === 0 && questionLang === "en" && window.parent !== window) {
-    window.parent.postMessage("quiz_start_en", "https://test4citizenusa.com");
+  if (currentQuestion === 0 && window.parent !== window) {
+    const eventName = questionLang === "es" ? "quiz_first_answer_es" : "quiz_start_en";
+    window.parent.postMessage(eventName, "https://test4citizenusa.com");
   }
 }
 
